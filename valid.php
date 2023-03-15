@@ -12,7 +12,7 @@ $num=$check->num_rows();
 $hashed_password=password_hash($password,PASSWORD_BCRYPT);
 
 if($num>0){
-    $response['result']="failed";
+    $response['status']="failed";
 }
 else{
     $query=$conn->prepare("INSERT INTO users(email,password) VALUES(?,?)");
