@@ -48,4 +48,9 @@ span{
     margin-top: 2% ;
     background-color:rgb(44, 44, 44);
     width: 50%;
-} 
+}
+#emerr,#perr{
+    color: rgb(255, 17, 0);
+    font-size: small;
+    font-family:monospace
+}
