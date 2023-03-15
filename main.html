@@ -9,19 +9,64 @@
 </head>
 <body>
     <div class="container">
-            <form action="" method="post" class="form">
+            <form action="../validation.php" method="post" class="form">
+                <h1>Sign-UP</h1>
+                <br> <!-- is it okay to use these for spaces??-->
                 <div class="part">
-                    <label for=""> First name </label>
+                    <label for=""> Email </label>
                     <br>
-                    <input type="email" name="" id="email" size="40" placeholder="enter you email" >
+                    <input type="email" name="" id="email" size="40" placeholder="Enter your email" >
                 </div>
                 <br>
                 <div class="part">
                     <label for=""> Password </label>
                     <br>
-                    <input type="password" name="" id="password" size="40" placeholder="enter a password" >
+                    <input type="password" name="" id="password" size="40" placeholder="Enter your password" >
                 </div>
             </form>
+
+            <form action="sort.php" method="get" class="form">
+                <h1>Let's have some fun !</h1>
+                <div class="part">
+                    <br>
+                    <label for="">Sorting</label>
+                    <br>
+                    <input type="text" name="" id="sort" size="20" placeholder="Enter list of numbers to be sorted" >
+                    <br>
+                    <span><label for="" id="res_sorted"> Result:</label></span>
+                    <br>
+                </div>
+                <div class="part">
+                    <br>
+                    <label for=""> Check if Palindrome :p</label>
+                    <br>
+                    <input type="text" name="" id="palindrome" size="20" placeholder="Ener a word" >
+                    <br>
+                    <span><label for="" id="res_palindromed"> Result:</label></span>
+                    <br>
+                </div>
+                <div class="part">
+                    <br>
+                    <label for=""> flip numbers in a word</label>
+                    <br>
+                    <input type="text" name="" id="flip" size="20" placeholder="Enter a word with numbers" >
+                    <br>
+                    <span><label for="" id="res_flipped"> Result:</label></span>
+                </div>
+            </form>
+            <form action="" class="form_special" method="post"> 
+                <h1>MORE FUN!</h1>
+                <div class="part">
+                    <br>
+                    <label for=""> Check if Palindrome :p</label>
+                    <br>
+                    <input type="text" name="" id="palindrome" size="20" placeholder="Ener a word" >
+                    <br>
+                    <span><label for="" id="res_palindromed"> Result:</label></span>
+                    <br>
+                </div>
+            </form>
+
     </div>
     
 </body>
