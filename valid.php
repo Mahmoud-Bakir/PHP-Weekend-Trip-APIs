@@ -18,7 +18,7 @@ else{
     $query=$conn->prepare("INSERT INTO users(email,password) VALUES(?,?)");
     $query->bind_param('ss',$email,$hashed_password);
     $query->execute();
-    $response["result"]="success";
+    $response["status"]="success";
 }
 echo json_encode($response);
 ?>
