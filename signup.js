@@ -52,7 +52,10 @@ function sorting(){
       "list":list
     }}).then((result)=>{ 
       console.log(result.data.status)
-      res_sorted.innerHTML=`Result= ${result.data.status}`
+      if(result.data.status=="failed"){
+      res_sorted.innerHTML=`Make sure to put a list of numbers seperated by commas`}
+      else{res_sorted.innerHTML=`Result = ${result.data.status}`
+      }
 
 
     })
