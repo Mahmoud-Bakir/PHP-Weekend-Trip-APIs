@@ -61,4 +61,19 @@ function sorting(){
     })
   
 }
+const btn3=document.getElementById("submit_palindrome")
+btn3.addEventListener("click",palindrome)
+function palindrome(){
+  const word=document.getElementById("palindrome").value
+  const res_palindromed=document.getElementById("res_palindromed")
+  console.log(word)
+
+     axios.get("http://localhost/PHP-Weekend-Trip-APIs/palindrome.php",{params:{
+    "palindrome":word
+    }}).then((result)=>{ 
+    console.log(result.data.status)
+    res_palindromed.innerHTML=`Result:${result.data.value}, ${word} ${result.data.status}`})
+}
+
+
     
