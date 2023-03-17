@@ -108,6 +108,19 @@ function date(){
   }else (res_date.innerHTML="please enter a valid date")
 }
 
+const addr=document.getElementById("add")
+console.log(addr)
+const btn6=document.getElementById("submit_IP")
+btn6.addEventListener("click",add)
+function add(){
+  data = new FormData();
+  axios.post("http://localhost/PHP-Weekend-Trip-APIs/address.php",data).then((res)=> {
+    addr.innerHTML=`You IP address is ${res.data.status}`
+    console.log(res.data.status)
+})
+  
+
+}
 
 
     
