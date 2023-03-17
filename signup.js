@@ -76,5 +76,21 @@ if(!(word.includes(" "))){
     else res_palindromed.innerHTML="please enter a valid word"
 }
 
+const btn4=document.getElementById("submit_flipped")
+btn4.addEventListener("click",flip)
+function flip(){
+  const word=document.getElementById("flip").value
+  const res_palindromed=document.getElementById("res_flipped")
+  console.log(word)
+if(!(word.includes(" "))){
+     axios.get("http://localhost/PHP-Weekend-Trip-APIs/flip.php",{params:{
+    "flip":word
+    }}).then((result)=>{ 
+    console.log(result.data)
+    res_palindromed.innerHTML=`Result: ${result.data.status}`})}
+    else res_palindromed.innerHTML="please enter a valid word"
+}
+
+
 
     

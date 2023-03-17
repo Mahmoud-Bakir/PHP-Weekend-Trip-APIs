@@ -1,7 +1,7 @@
 <?php 
 include("connection.php");
 header('Access-Control-Allow-Origin:*');
-$variable=$_GET["lst"];
+$variable=$_GET["list"];
 $arr=explode(",",$variable);
 sort($arr);
 $num=count($arr);
