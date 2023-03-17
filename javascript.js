@@ -86,9 +86,26 @@ if(!(word.includes(" "))){
      axios.get("http://localhost/PHP-Weekend-Trip-APIs/flip.php",{params:{
     "flip":word
     }}).then((result)=>{ 
-    console.log(result.data)
+    console.log(result.data.status)
     res_palindromed.innerHTML=`Result: ${result.data.status}`})}
     else res_palindromed.innerHTML="please enter a valid word"
+}
+
+const btn5=document.getElementById("submit_date")
+btn5.addEventListener("click",date)
+function date(){
+  const date=document.getElementById("date").value
+  const res_date=document.getElementById("res_date")
+  if(!(date.includes(" ")) && date!=""){
+    data=new FormData()
+    data.append("date",date)
+    axios.post("http://localhost/PHP-Weekend-Trip-APIs/date.php",data).then((res)=> {
+      res_date.innerHTML=`your age is : ${res.data.status}`
+      console.log(res.data.status)
+  
+
+    })
+  }else (res_date.innerHTML="please enter a valid date")
 }
 
 

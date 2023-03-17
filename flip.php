@@ -31,8 +31,6 @@ $final=[];
   }else $final[$i]=$test[$i];
   if ($i==$size-1) break;
   }
-  print_r($positions);
-  print_r($rev);
 $f=implode("",$final);
 $response["status"]="$f";
 echo json_encode($response);

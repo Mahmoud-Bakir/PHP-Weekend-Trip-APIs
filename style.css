@@ -17,6 +17,7 @@ body{
     margin-top: 2% ;
     background-color:rgb(44, 44, 44);
     width: 50%;
+    border-radius: 5%;
 }
 .part{
     margin-right: 20%;
@@ -33,7 +34,7 @@ form h1{
     font-family: 'Lucida Sans Regular';
 }
 label{
-    font-size: large;
+    font-size: 2rem;
     font-family: 'Lucida Sans';
 }
 span{
